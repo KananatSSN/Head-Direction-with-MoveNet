@@ -2,26 +2,7 @@
 
 โมเดลนี้ใช้ผลลัพธ์จาก MoveNet ในการคำนวณทิศทางที่คนกำลังมองโดย
 
-1. ใช้ MoveNet detect key point ทั้ง 17 จุดได้แก่ 
-KEYPOINT_DICT = {
-     'nose':0,
-     'left_eye':1,
-     'right_eye':2,
-     'left_ear':3,
-     'right_ear':4,
-     'left_shoulder':5,
-     'right_shoulder':6,
-     'left_elbow':7,
-     'right_elbow':8,
-     'left_wrist':9,
-     'right_wrist':10,
-     'left_hip':11,
-     'right_hip':12,
-     'left_knee':13,
-     'right_knee':14,
-     'left_ankle':15,
-     'right_ankle':16
- }
+1. ใช้ MoveNet detect key point ทั้ง 17 จุดได้แก่ [nose, left_eye, right_eye, left_ear, right_ear, left_shoulder, right_shoulder, left_elbow, right_elbow, left_wrist, right_wrist, left_hip, right_hip, left_knee, right_knee, left_ankle, right_ankle]
  โดย output จาก MoveNet จะมีมิติ 6*17*3 คือ [x_coord, y_coord, confident] สำหรับทั้ง 17 จุด สำหรับ 6 คน ใน 1 frame
  
 2. ลากลูกศรจากจุดกึ่งกลางระหว่างหูทั้ง 2 ข้างไปยังจมูกเพื่อลากลูกษรทิศทางหน้าคน
